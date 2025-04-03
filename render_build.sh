@@ -2,9 +2,17 @@
 # exit on error
 set -o errexit
 
+# Instalar dependencias de Node
 npm install
 npm run build
 
-pipenv install
+# Crear y activar entorno virtual
+python -m venv venv
+source venv/bin/activate
 
-pipenv run upgrade
+# Instalar dependencias de Python
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# Ejecutar migraciones
+flask db upgrade

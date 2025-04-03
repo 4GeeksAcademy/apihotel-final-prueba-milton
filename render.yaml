@@ -6,8 +6,8 @@ services:
       region: ohio
       name: sample-service-name
       env: python # valid values: https://render.com/docs/yaml-spec#environment
-      buildCommand: "./render_build.sh"
-      startCommand: "gunicorn wsgi --chdir ./src/"
+      buildCommand: chmod +x render_build.sh && ./render_build.sh
+      startCommand: gunicorn wsgi:application --chdir ./src/
       plan: free # optional; defaults to starter
       numInstances: 1
       envVars:
