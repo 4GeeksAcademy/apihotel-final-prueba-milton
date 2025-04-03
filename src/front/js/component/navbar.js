@@ -11,6 +11,7 @@ import {
   faBars
 } from "@fortawesome/free-solid-svg-icons";
 import DarkModeToggle from "./dark";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
