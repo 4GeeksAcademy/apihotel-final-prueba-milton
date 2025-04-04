@@ -16,3 +16,4 @@ pip install -r requirements.txt --no-cache-dir
 
 # Ejecutar migraciones
 flask db upgrade
+
