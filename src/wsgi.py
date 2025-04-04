@@ -1,6 +1,12 @@
 # This file was created to run the application on heroku using gunicorn.
 # Read more about it here: https://devcenter.heroku.com/articles/python-gunicorn
 
+import os
+import sys
+
+# Agregar el directorio actual al path para que Python pueda encontrar los módulos
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from app import app as application
 
 if __name__ == "__main__":
