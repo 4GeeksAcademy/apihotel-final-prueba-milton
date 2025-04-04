@@ -11,8 +11,8 @@ python -m venv venv
 source venv/bin/activate
 
 # Instalar dependencias de Python
-pip install --upgrade pip
-pip install -r requirements.txt
+pip install --upgrade pip setuptools wheel
+pip install -r requirements.txt --no-cache-dir
 
 # Ejecutar migraciones
 flask db upgrade
